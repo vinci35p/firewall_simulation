@@ -2,8 +2,8 @@ import random
 # firewall Class
 class Firewall:
     # constructor
-    def __init__(self, rules, port_rules=None, log_file="firewall_log"):
-        self.rules = rules
+    def __init__(self, ip_rules, port_rules=None, log_file="firewall_log"):
+        self.ip_rules = ip_rules
         self.port_rules = port_rules if port_rules else []
         self.blocked_count = 0
         self.allowed_count = 0
@@ -17,9 +17,21 @@ class Firewall:
     def generate_random_ip(self):
         return f"192.168.1.{random.randint(0, 20)}"
 
+    # generate random port
+    def generate_random_port(self):
+        return random.choice([22, 80, 443, 8080, 3306])
+
     # check created random ip
-    def check_ip(self, ip):
-        action = self.rules.get(ip, "allow")
+    def check_ip(self, ip_address, port):
+        action = "allow"
+
+        if self.ip_rules.get(ip_address) == "block":
+            action = "block"
+
+        if port in self.port_rules:
+            action = "block"
+            self.blocked_by_port[port] = self.blocked_by_port.get(port, 0) + 1
+
         if action == "block":
             self.blocked_count += 1
         else:
