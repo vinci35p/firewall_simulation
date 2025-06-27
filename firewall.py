@@ -1,4 +1,6 @@
 import random
+from ipaddress import ip_address
+
 
 # firewall Class
 class Firewall:
@@ -24,5 +26,8 @@ class Firewall:
         return action
 
     # log of blocked and allowed ip
+    def log_packet(self, ip_address, action, packet_id):
+        with open(self.log_file, "a") as file:
+            file.write(f"IP: {ip_address}, Action: {action.upper()}, Packet ID: {packet_id}\n")
 
     # traffic simulation
