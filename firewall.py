@@ -2,11 +2,13 @@ import random
 # firewall Class
 class Firewall:
     # constructor
-    def __init__(self, rules, log_file="firewall_log"):
+    def __init__(self, rules, port_rules=None, log_file="firewall_log"):
         self.rules = rules
+        self.port_rules = port_rules if port_rules else []
         self.blocked_count = 0
         self.allowed_count = 0
         self.log_file = log_file
+        self.blocked_by_port = {}
 
         with open(self.log_file, "w") as file:
             file.write("=== FIREWALL LOG START ===\n")
