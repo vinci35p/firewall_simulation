@@ -1,4 +1,5 @@
 # from firewall import the class
+from firewall import Firewall
 
 if __name__ == "__main__":
     firewall_rules = {
@@ -10,3 +11,6 @@ if __name__ == "__main__":
         "192.168.1.19": "block"
     }
     # run the code
+
+    fire_w = Firewall(firewall_rules)
+    fire_w.simulate_traffic(num_packets=12)
