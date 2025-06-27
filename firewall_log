@@ -1,13 +1,13 @@
 === FIREWALL LOG START ===
-IP: 192.168.1.8, Action: ALLOW, Packet ID: 9896
-IP: 192.168.1.13, Action: BLOCK, Packet ID: 5209
-IP: 192.168.1.9, Action: BLOCK, Packet ID: 1934
-IP: 192.168.1.18, Action: ALLOW, Packet ID: 6179
-IP: 192.168.1.12, Action: ALLOW, Packet ID: 3374
-IP: 192.168.1.4, Action: BLOCK, Packet ID: 8580
-IP: 192.168.1.2, Action: ALLOW, Packet ID: 707
-IP: 192.168.1.12, Action: ALLOW, Packet ID: 3615
-IP: 192.168.1.11, Action: ALLOW, Packet ID: 9564
-IP: 192.168.1.18, Action: ALLOW, Packet ID: 4231
-IP: 192.168.1.6, Action: ALLOW, Packet ID: 1103
-IP: 192.168.1.11, Action: ALLOW, Packet ID: 3876
+IP: 192.168.1.2, Action: ALLOW, Packet ID: 5877
+IP: 192.168.1.18, Action: ALLOW, Packet ID: 248
+IP: 192.168.1.4, Action: BLOCK, Packet ID: 7992
+IP: 192.168.1.5, Action: ALLOW, Packet ID: 7400
+IP: 192.168.1.12, Action: ALLOW, Packet ID: 5887
+IP: 192.168.1.18, Action: ALLOW, Packet ID: 5410
+IP: 192.168.1.0, Action: ALLOW, Packet ID: 4256
+IP: 192.168.1.15, Action: ALLOW, Packet ID: 5328
+IP: 192.168.1.7, Action: ALLOW, Packet ID: 7437
+IP: 192.168.1.0, Action: ALLOW, Packet ID: 4026
+IP: 192.168.1.11, Action: ALLOW, Packet ID: 6253
+IP: 192.168.1.0, Action: ALLOW, Packet ID: 5995
