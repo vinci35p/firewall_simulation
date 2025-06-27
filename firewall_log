@@ -1,13 +1,16 @@
 === FIREWALL LOG START ===
-IP: 192.168.1.2, Action: ALLOW, Packet ID: 5877
-IP: 192.168.1.18, Action: ALLOW, Packet ID: 248
-IP: 192.168.1.4, Action: BLOCK, Packet ID: 7992
-IP: 192.168.1.5, Action: ALLOW, Packet ID: 7400
-IP: 192.168.1.12, Action: ALLOW, Packet ID: 5887
-IP: 192.168.1.18, Action: ALLOW, Packet ID: 5410
-IP: 192.168.1.0, Action: ALLOW, Packet ID: 4256
-IP: 192.168.1.15, Action: ALLOW, Packet ID: 5328
-IP: 192.168.1.7, Action: ALLOW, Packet ID: 7437
-IP: 192.168.1.0, Action: ALLOW, Packet ID: 4026
-IP: 192.168.1.11, Action: ALLOW, Packet ID: 6253
-IP: 192.168.1.0, Action: ALLOW, Packet ID: 5995
+IP: 192.168.1.2, Port: 80, Action: ALLOW, Packet ID: 8324
+IP: 192.168.1.5, Port: 443, Action: ALLOW, Packet ID: 1862
+IP: 192.168.1.17, Port: 8080, Action: ALLOW, Packet ID: 7545
+IP: 192.168.1.17, Port: 3306, Action: BLOCK, Packet ID: 4752
+IP: 192.168.1.2, Port: 8080, Action: ALLOW, Packet ID: 5154
+IP: 192.168.1.4, Port: 443, Action: BLOCK, Packet ID: 8306
+IP: 192.168.1.11, Port: 443, Action: ALLOW, Packet ID: 2258
+IP: 192.168.1.20, Port: 22, Action: BLOCK, Packet ID: 4133
+IP: 192.168.1.1, Port: 3306, Action: BLOCK, Packet ID: 8064
+IP: 192.168.1.6, Port: 443, Action: ALLOW, Packet ID: 1057
+IP: 192.168.1.15, Port: 80, Action: ALLOW, Packet ID: 6138
+IP: 192.168.1.6, Port: 80, Action: ALLOW, Packet ID: 5433
+IP: 192.168.1.4, Port: 80, Action: BLOCK, Packet ID: 2057
+IP: 192.168.1.9, Port: 22, Action: BLOCK, Packet ID: 1398
+IP: 192.168.1.18, Port: 443, Action: ALLOW, Packet ID: 4375
