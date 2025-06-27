@@ -40,19 +40,24 @@ class Firewall:
         return action
 
     # log of blocked and allowed ip
-    def log_packet(self, ip_address, action, packet_id):
+    def log_packet(self, ip_address, port, action, packet_id):
         with open(self.log_file, "a") as file:
-            file.write(f"IP: {ip_address}, Action: {action.upper()}, Packet ID: {packet_id}\n")
+            file.write(f"IP: {ip_address}, Port: {port}, Action: {action.upper()}, Packet ID: {packet_id}\n")
 
     # traffic simulation
     def simulate_traffic(self, num_packets=12):
         for _ in range(num_packets):
             ip_address = self.generate_random_ip()
-            action = self.check_ip(ip_address)
-            packet_id = random.randint(0, 9999)
-            print(f"IP: {ip_address}, Action: {action.upper()}, Packet ID: {packet_id}")
-            self.log_packet(ip_address, action, packet_id)
+            port = self.generate_random_port()
+            action = self.check_ip(ip_address, port)
+            packet_id = random.randint(1000, 9999)
+            print(f"IP: {ip_address}, Port: {port}, Action: {action.upper()}, Packet ID: {packet_id}")
+            self.log_packet(ip_address, port, action, packet_id)
 
         print(f"\nSummary:")
         print(f"Blocked: {self.blocked_count}")
         print(f"Allowed: {self.allowed_count}")
+        if self.blocked_by_port:
+            print(f"\nBlocked Packets by Port:")
+            for port, count in self.blocked_by_port.items():
+                print(f"Port {port}: {count} packets")
