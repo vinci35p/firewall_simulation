@@ -1,7 +1,4 @@
 import random
-from ipaddress import ip_address
-
-
 # firewall Class
 class Firewall:
     # constructor
@@ -10,6 +7,9 @@ class Firewall:
         self.blocked_count = 0
         self.allowed_count = 0
         self.log_file = log_file
+
+        with open(self.log_file, "w") as file:
+            file.write("=== FIREWALL LOG START ===\n")
 
     # generate random ip
     def generate_random_ip(self):
@@ -39,6 +39,6 @@ class Firewall:
             print(f"IP: {ip_address}, Action: {action.upper()}, Packet ID: {packet_id}")
             self.log_packet(ip_address, action, packet_id)
 
-            print(f"\n Summary:")
-            print(f"Blocked: {self.blocked_count}")
-            print(f"Allowed: {self.allowed_count}")
+        print(f"\nSummary:")
+        print(f"Blocked: {self.blocked_count}")
+        print(f"Allowed: {self.allowed_count}")
